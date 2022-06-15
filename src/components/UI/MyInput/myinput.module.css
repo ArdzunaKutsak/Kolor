@@ -1,0 +1,22 @@
+.input,
+.inputOpinion{
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-bottom: 2px solid var(--pink);
+    background-color: transparent;
+}
+.input {
+    padding-top: 20px;
+}
+.inputOpinion {
+    overflow-wrap: break-word;
+    padding-bottom: 30px;
+}
+.input:focus,
+.inputOpinion:focus {
+    border-bottom: 2px solid #fff;
+    outline: none;
+}

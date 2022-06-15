@@ -1,0 +1,27 @@
+.container {
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 2px solid var(--pink);
+    border-radius: 20px;
+
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--pink);
+    font-size: 16px;
+}
+.body{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.picture {
+    margin-top: 10px;
+    max-width: 50%;
+    max-height: 250px;
+}
+.date {
+    letter-spacing: 1px;
+}

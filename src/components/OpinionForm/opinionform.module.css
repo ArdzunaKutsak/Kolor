@@ -1,0 +1,62 @@
+.container {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    animation: shrink .4s ease;
+    height: 220px;
+}
+@keyframes shrink {
+    0%{
+        height: 0;
+        opacity: 0;
+
+    }
+    50%{
+        opacity: 0;
+        height: 220px;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media (min-width: 1024px){
+
+
+.container {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    animation: shrink .4s ease;
+    height: 150px;
+}
+
+@keyframes shrink {
+    0%{
+        height: 0;
+        opacity: 0;
+
+    }
+    50%{
+        opacity: 0;
+        height: 150px;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.wrapper {
+    
+    width: calc(50% - 15px);
+    height: 50px;
+
+}
+
+.wrapper:first-child {
+    margin-right: 30px;
+    height: 100%;
+}
+
+}

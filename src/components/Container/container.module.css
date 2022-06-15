@@ -1,0 +1,15 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+  
+}
+@media (min-width:1024px){
+    .container{
+        background: url(../../assests/bigback.jpg) no-repeat center center transparent;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+}

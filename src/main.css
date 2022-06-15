@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Monoton&family=Poiret+One&family=Pacifico&display=swap');
+:root {
+    
+    --dirty-aqua: #0b717b;
+    --dirty-aqua-opacity: #0b717bcc;
+    --pink: #fa97a5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+body {
+    font-family: 'Poiret One', sans-serif;
+    color: #fff;
+    background-color: var(--dirty-aqua);
+    overflow-x: hidden;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+a:hover {
+    opacity:0.6;
+}
+.accordion-item {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+}
+.accordion-header button:focus {
+    box-shadow: none;
+}
+
+.accordion-button {
+    background-color: transparent !important; 
+    margin-top: 20px !important;
+    padding: 5px 15px !important;
+    border: 1px solid #fff !important;
+    border-radius: 0px !important;
+    font-size: 22px !important;
+    color: #fff !important;
+
+}
+.accordion-button::after {
+    display: none;
+}
+.modal-content {
+    background-color: #333;
+}
+.modal-header {
+    justify-content: center;
+}
+
+.fade.modal.show{
+    width: 100vw;
+}
+/* .img{
+    background: url(./assests/Inna.jpg) center center no-repeat;
+    background-size: cover;
+    display: block;
+    margin-left: auto;
+    height: 100vh;
+    width: 100wv;
+
+} */
+@media (min-width:600px) {
+    .accordion-item {
+        max-width: 155px;
+    }
+    .accordion-body {
+        padding: 1px;
+    }
+    
+}
+@media (min-width:1024px){
+    body{
+        overflow: hidden;
+    }
+    .accordion-collapse.collapse.show {
+        height: 0px;
+    }
+    .accordion-body {
+        height: 0px;
+    }
+}

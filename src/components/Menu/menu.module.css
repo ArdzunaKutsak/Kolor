@@ -1,0 +1,41 @@
+.container {
+    position: absolute;
+    top:60px;
+    margin-left: auto;
+    background-color: var(--dirty-aqua-opacity);
+    transition: transform 0.3s ease;
+ 
+
+}
+
+.item {
+    padding: 15px 20px;
+}
+.link {
+    display: block;
+    font-size: 24px;
+}
+.link:not(:last-child){
+    border-bottom: 1px solid #fff ;
+}
+.link:hover {
+    color: #fff;
+}
+
+@media (min-width:1024px){
+    .container {
+        transform: translateX(0px);
+        position: absolute;
+        width: 100%;
+        top:0px;
+        display: flex;
+        justify-content: space-around;
+        background-color: #2b717b4d;
+        backdrop-filter: blur(5px);
+        
+    }
+    .link {
+        
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,23 @@
+.textarea{
+    
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-bottom: 2px solid var(--pink);
+    background-color: transparent;
+}
+
+
+textarea:focus {
+    border-bottom: 2px solid #fff;
+    outline: none;
+}
+
+@media (min-width:1024px) {
+    .textarea
+    {
+        padding-top: 25px;
+    }
+}

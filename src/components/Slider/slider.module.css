@@ -1,0 +1,20 @@
+.container {
+    background-color: transparent;
+}
+
+.img {
+    opacity: 0.1;
+    width: 100vw;
+    height: 320px;
+}
+
+.header,
+.description {
+    font-family: 'Poiret One', sans-serif;
+}
+
+@media (min-width:1024px) {
+    .slider{
+        display: none;
+    }
+}
