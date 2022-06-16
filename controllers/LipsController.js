@@ -14,6 +14,12 @@ class LipsController {
         const lips = await Lips.findAll()
         return res.json(lips)
     }
+    async delete(req,res) {
+        const { id } = req.params;
+        await Lips.destroy({
+            where: {id},     
+        })    
+    }
 }
 
 module.exports = new LipsController()

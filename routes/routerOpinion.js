@@ -4,6 +4,6 @@ const router = new Router()
 
 router.post('/', OpinionController.create)
 router.get('/', OpinionController.getAll)
-router.get('/:id', OpinionController.getOne)
+router.delete('/:id', OpinionController.delete)
 
 module.exports = router

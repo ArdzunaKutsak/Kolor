@@ -19,12 +19,12 @@ class OpinionController {
         const opinions = await Opinion.findAll()
         return res.json(opinions)
     }
-    async getOne(req,res) {
+    async delete(req,res) {
         const { id } = req.params;
-        const opinion = await Opinion.findOne({
+        await Opinion.destroy({
             where: {id},     
         }, )  
-        return res.json(opinion)
+        
     }
 }
 

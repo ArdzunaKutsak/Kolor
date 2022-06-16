@@ -14,6 +14,12 @@ class TattooController {
         const tattoos = await Tattoo.findAll()
         return res.json(tattoos)
     }
+    async delete(req,res) {
+        const { id } = req.params;
+        await Tattoo.destroy({
+            where: {id},     
+        })    
+    }
 }
 
 module.exports = new TattooController()

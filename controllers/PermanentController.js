@@ -14,6 +14,12 @@ class PermanentController {
         const permanents = await Permanent.findAll()
         return res.json(permanents)
     }
+    async delete(req,res) {
+        const { id } = req.params;
+        await Permanent.destroy({
+            where: {id},     
+        })    
+    }
 }
 
 module.exports = new PermanentController()
