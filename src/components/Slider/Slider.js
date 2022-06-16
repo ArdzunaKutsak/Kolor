@@ -4,6 +4,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import briliant from '../../assests/briliant.svg'
 import circul from '../../assests/circul.svg'
 import laurel from '../../assests/laurel.svg'
+import { observer } from "mobx-react-lite";
 
 
 const Slider = () => {

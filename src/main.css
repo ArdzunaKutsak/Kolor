@@ -17,6 +17,9 @@ button {
     border: none;
     background-color: transparent;
 }
+button:active{
+    transform: scale(.98);
+}
 body {
     font-family: 'Poiret One', sans-serif;
     color: #fff;
@@ -67,15 +70,6 @@ a:hover {
 .fade.modal.show{
     width: 100vw;
 }
-/* .img{
-    background: url(./assests/Inna.jpg) center center no-repeat;
-    background-size: cover;
-    display: block;
-    margin-left: auto;
-    height: 100vh;
-    width: 100wv;
-
-} */
 @media (min-width:600px) {
     .accordion-item {
         max-width: 155px;
@@ -94,5 +88,6 @@ a:hover {
     }
     .accordion-body {
         height: 0px;
+        width: 300px;
     }
 }

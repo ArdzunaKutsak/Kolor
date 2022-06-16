@@ -7,7 +7,7 @@ import OpinionForm from '../../OpinionForm/OpinionForm';
 import { fetchOpinion } from "../../../http/opinionAPI";
 import {observer} from 'mobx-react-lite';
 
-const OpinionModal =  observer(({show, onHide}) => {
+const OpinionModal =  ({show, onHide}) => {
     const [opinions, setOpinions] = useState([])
     const [needRender, setNeedRender] = useState('')
     const [showForm, setShowForm] = useState(false)
@@ -38,6 +38,6 @@ const OpinionModal =  observer(({show, onHide}) => {
       </Modal.Body>
         </Modal>
      );
-})
+}
 
 export default OpinionModal;

@@ -7,11 +7,16 @@ import styles from './opinionform.module.css'
 import CreateOpinion from '../../handlers/createOpinion';
 import {observer} from 'mobx-react-lite'
 
-const OpinionForm = observer(({callback}) => {
+const OpinionForm = ({callback}) => {
     const [name, setName] = useState('')
     const [text, setText] = useState('')
     const [picture, setPicture] = useState(null)
-    const send =(event)=>{
+   
+    const send = (event)=>{
+        if(!name || !text || !picture){
+            alert('Необходимо заполнить все поля')
+            return
+        }
         event.preventDefault()
         CreateOpinion({name: name, text: text, picture: picture})
         callback(Date.now())
@@ -19,13 +24,26 @@ const OpinionForm = observer(({callback}) => {
     return ( 
         <form id='opinionForm' className={styles.container}>
             <div className={styles.wrapper}>
-                <MyTextArea value={text} onChange={event=>setText(event.target.value)} required={true} name={'text'} placeholder={'Отзыв'} />
+                <MyTextArea 
+                    value={text} 
+                    onChange={event=>setText(event.target.value)} 
+                    required={true} 
+                    name={'text'} 
+                    placeholder={'Отзыв'} />
             </div>
             <div className={styles.wrapper}>
-                <MyInput value={name} onChange={(event)=>setName(event.target.value)} required={true} name={'name'} placeholder={'Имя'} type={'text'}/>
+                <MyInput 
+                    value={name} 
+                    onChange={(event)=>setName(event.target.value)} 
+                    required={true} 
+                    name={'name'} 
+                    placeholder={'Имя'} 
+                    type={'text'}/>
             </div>
             <div className={styles.wrapper}>
-                <MyInputFile onChange={(event)=>setPicture(event.target.files[0])} required={true} name={'picture'} />
+                <MyInputFile 
+                    onChange={(event)=>setPicture(event.target.files[0])} 
+                    name={'picture'} />
             </div>
             <div className={styles.wrapper}>
                 <MyButton onClick={send}/>
@@ -33,6 +51,6 @@ const OpinionForm = observer(({callback}) => {
             
         </form>
      );
-})
+}
 
 export default OpinionForm;

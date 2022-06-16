@@ -9,3 +9,6 @@ export const fetchOpinion = async () => {
     const {data} = await $host.get('api/opinion')
     return data
 } 
+export const deleteOpinion = async (id) => {
+    await $host.delete(`api/opinion/${id}`)
+} 

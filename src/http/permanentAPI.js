@@ -9,3 +9,6 @@ export const fetchPermanent = async () => {
     const {data} = await $host.get('api/permanent')
     return data
 } 
+export const deletePermanent = async (id) => {
+    await $host.delete(`api/permanent/${id}`)
+} 

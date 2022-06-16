@@ -1,8 +1,9 @@
+import { observer } from 'mobx-react-lite';
 import React from 'react';
 import {Modal} from 'react-bootstrap'
 import styles from './expmodal.module.css'
 
-function ExpModal({show, onHide})
+const ExpModal=({show, onHide}) =>
       {
         return (
           <Modal

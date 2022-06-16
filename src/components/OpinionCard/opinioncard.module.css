@@ -5,6 +5,9 @@
     border-radius: 20px;
 
 }
+.deleteBtn {
+    color:#ffffff55
+}
 .header {
     display: flex;
     justify-content: space-between;

@@ -10,7 +10,7 @@ import login from "./login"
     }
     else {
         e.preventDefault()
-        const menuArray = ['#promo', '#contacts', '#price', '#work', '#about']
+        const menuArray = ['#contacts', '#price', '#work', '#about']
         document.querySelector('#tagline').style.opacity = 0;
         menuArray.forEach(each => {
             const elem = document.querySelector(each)

@@ -9,3 +9,6 @@ export const fetchLips = async () => {
     const {data} = await $host.get('api/lips')
     return data
 } 
+export const deleteLips = async (id) => {
+    await $host.delete(`api/lips/${id}`)
+} 

@@ -15,7 +15,7 @@ const MyInputFile =  observer(({ name, onChange, required=false}) => {
     } 
     return ( 
         <div className={styles.wrapper}>
-            <input id='inputFile' onChange={change} className={styles.input} required={required} name={name} type='file'/>
+            <input id='inputFile' onChange={change} className={styles.input} name={name} type='file'/>
             <label className={styles.label} for='inputFile'>
                 {picName ? `${picName}` : text}
                 <span className={styles.required}>{picName ? '' : 'обязательно'}</span>

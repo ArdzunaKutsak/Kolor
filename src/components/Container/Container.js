@@ -1,7 +1,8 @@
+import { observer } from "mobx-react-lite";
 import React from "react";
 import styles from './container.module.css'
 
-const Container = ({children}) => {
+const Container =({children}) => {
     return (
         <div className={styles.container}>
             {children}

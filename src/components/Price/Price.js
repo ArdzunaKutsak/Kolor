@@ -1,8 +1,9 @@
+import { observer } from 'mobx-react-lite';
 import React from 'react';
 import styles from './price.module.css'
 
 
-function Price() {
+const Price = () => {
     return ( 
         <div id='price' className={styles.container}>
             <h1 className={styles.title}>Цены</h1>

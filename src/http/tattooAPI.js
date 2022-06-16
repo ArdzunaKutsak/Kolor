@@ -9,3 +9,6 @@ export const fetchTattoo = async () => {
     const {data} = await $host.get('api/tattoo')
     return data
 } 
+export const deleteTattoo = async (id) => {
+    await $host.delete(`api/tattoo/${id}`)
+} 

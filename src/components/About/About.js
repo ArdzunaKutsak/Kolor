@@ -3,7 +3,9 @@ import ExpModal from '../Modals/ExpModal/ExpModal';
 import OpinionModal from '../Modals/OpinionModal/OpinionModal';
 import SertificateModal from '../Modals/SertifacateModal/SertificateModal';
 import styles from './about.module.css'
-function About() {
+import { observer } from 'mobx-react-lite';
+
+const About=()=> {
     const [sertificateIsOpen, setSertificateIsOpen] = useState(false)
     const [expIsOpen, setExpIsOpen] = useState(false)
     const [opinionIsOpen, setOpinionIsOpen] = useState(false)

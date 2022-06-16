@@ -1,10 +1,11 @@
+import { observer } from 'mobx-react-lite';
 import React from 'react';
 import { Modal } from 'react-bootstrap';
 import sertPermanent from '../../../assests/sertificat1.jpg'
 import sertLips from '../../../assests/sertificat2.jpg'
 import styles from './sertificatemodal.module.css'
 
-function SertificateModal({show, onHide}) {
+const SertificateModal = ({show, onHide}) => {
     return ( 
 
         <Modal

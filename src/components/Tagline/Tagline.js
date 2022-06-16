@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from './tagline.module.css'
 import { Parallax, Background } from 'react-parallax';
+import { observer } from "mobx-react-lite";
 
 const Tagline = () => {
     const [offsetY, setOffsetY] = useState(0);

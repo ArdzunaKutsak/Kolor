@@ -1,16 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 import styles from './navbar.module.css'
 import burger from '../../assests/burger.svg'
-import useScrollNav from "../hooks/useScrollNav";
+import useScrollNav from "../../hooks/useScrollNav";
 import Menu from "../Menu/Menu";
 import { observer } from "mobx-react-lite";
-import Sizing from "../../handlers/Sizing";
 import navClick from "../../handlers/navClick";
 import initialOffsetMenu from "../../handlers/initialOffsetMenu";
 import { AdminContext } from "../../App";
 
 
-const Navbar = observer(() => {
+const Navbar = () => {
     let {initialOffset, desktop} = initialOffsetMenu()
     const [offset, setOffset] = useState(initialOffset);
     useScrollNav(setOffset)
@@ -35,6 +34,6 @@ const Navbar = observer(() => {
         </div>
 
     )
-})
+}
 
 export default Navbar;

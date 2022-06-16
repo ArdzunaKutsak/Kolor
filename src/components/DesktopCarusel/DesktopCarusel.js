@@ -5,6 +5,7 @@ import briliant from '../../assests/briliant.svg'
 import circul from '../../assests/circul.svg'
 import laurel from '../../assests/laurel.svg'
 import Contacts from "../Contacts/Contacts";
+import { observer } from "mobx-react-lite";
 
 
 const DesktopCarusel = () => {

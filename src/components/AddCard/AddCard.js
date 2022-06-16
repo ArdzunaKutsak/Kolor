@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './addcard.module.css'
 import addPhoto from '../../handlers/addPhoto';
-
+import { observer } from 'mobx-react-lite';
 const AddCard = ({createWhat}) => {
     const [link, setLink] = useState('')
     const add = () => addPhoto(link, setLink, createWhat)

@@ -14,7 +14,6 @@ const Desktop = observer(() =>{
         <Container>
             <Navbar />
             <Tagline />
-            <Promo />
             <Work />
             <Price />
             <About />

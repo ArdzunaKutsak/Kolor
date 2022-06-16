@@ -7,7 +7,7 @@ import drawIcon from '../../assests/draw-logo.svg'
 import Sizing from '../../handlers/Sizing'
 import {observer} from 'mobx-react-lite'
 
-const Contacts = observer(() => {
+const Contacts = () => {
     const desktop = Sizing()
     return (
         <div id='contacts' className={styles.container}>
@@ -32,6 +32,6 @@ const Contacts = observer(() => {
             {!desktop && <a href="tel:+79817047769" className={styles.wa}><img className={styles.icon} src={waIcon} /> 8 981 704 77 69</a>}     
         </div>
     )
-})
+}
 
 export default Contacts;

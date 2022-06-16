@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import {Accordion} from 'react-bootstrap'
 import styles from './promo.module.css'
 import Sizing from '../../handlers/Sizing'
+import { observer } from "mobx-react-lite"
 
 const PromoSecond = ({title, img, body}) => {
     const [bright, setBright] = useState(1)
@@ -16,21 +17,18 @@ const PromoSecond = ({title, img, body}) => {
                 <h2 className={styles.secondTitle}>{title}</h2>
                 <img className={styles.img} src={img} style={{ filter:`brightness(${bright})`}} />
                 <div>
-                <Accordion >
-                    <Accordion.Item eventKey="0">
-                        <Accordion.Header onClick={toggleBright} as='button'>Подробнее</Accordion.Header>
-                        <Accordion.Body>
-                            <div className={styles.body}>
-                                {body.map((b,i)=><div key={i}>{b}</div>)}
-                                
-                            </div>
-                        </Accordion.Body>
-                    </Accordion.Item>
-                </Accordion>
+                    <Accordion >
+                        <Accordion.Item eventKey="0">
+                            <Accordion.Header onClick={toggleBright} as='button'>Подробнее</Accordion.Header>
+                            <Accordion.Body>
+                                <div className={styles.body}>
+                                    {body.map((b,i)=><div className={styles.bodyItem} key={i}>{b}</div>)}                
+                                </div>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
                 </div>
             </div>
-       
-
     )
 }
 
